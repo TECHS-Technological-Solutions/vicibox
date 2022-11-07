@@ -1,4 +1,4 @@
-name: fortressleads
+name: vicibox-python-api-wrapper
 
 on:
   push:
