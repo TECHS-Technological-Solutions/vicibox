@@ -1,0 +1,26 @@
+inherits:
+  - strictness_veryhigh
+  - full_pep8
+
+#ignore-paths:
+
+
+doc-warnings: false
+test-warnings: true
+
+pylint:
+  disable:
+    - too-few-public-methods
+    - redefined-builtin
+    - too-many-arguments
+  options:
+    max-locals: 25
+    max-line-length: 120
+
+pep8:
+  options:
+    max-line-length: 120
+
+profile-validator:
+  disable:
+    - deprecated-tool-code
