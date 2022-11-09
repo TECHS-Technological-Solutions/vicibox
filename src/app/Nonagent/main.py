@@ -581,11 +581,11 @@ non_agent_function_list = [
 ]
 
 
-async def call_non_agent_api(base_url: str, function_and_values_dict: dict) -> dict:
+async def call_non_agent_api(base_non_agent_url: str, function_and_values_dict: dict) -> dict:
     if 'function' in function_and_values_dict:
         if function_and_values_dict['function'] in non_agent_function_list:
             # Create target URL based on query params that was provided
-            url = create_target_url(base_url, function_and_values_dict)
+            url = create_target_url(base_non_agent_url, function_and_values_dict)
 
             # Make a request to Vicibox
             response = await make_request(url)

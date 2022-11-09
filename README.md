@@ -1,34 +1,25 @@
-=======
-VICIBOX PYTHON WRAPPER
-=======
+# VICIBOX PYTHON WRAPPER
 
-   
-Introduction
-============
-
+## Introduction
 This is Python implementation of wrapper for Vicibox API.
 
+## Getting Started
 
-Getting Started
-===============
 
-Installation
-------------
+### Installation
 
 Install Vicibox Python wrapper like this:
 
-.. code-block:: bash
-
+```bash
     pip install py-vicibox
+```
 
-
-How Does it Work?
------------------
+### How Does it Work?
 
 In order to use Python vicibox wrapper firstly have to decide which type of API you want to use.
 Then for instance with the use of:
 
-.. code-block:: python
+```python
 
     async def call_non_agent_api(base_url: str, function_and_values_dict: dict) -> dict:
         if 'function' in function_and_values_dict:
@@ -41,13 +32,17 @@ Then for instance with the use of:
                 return response
             raise HTTPException(400, 'Provided function is not accessible via non-agent API.')
         raise HTTPException(400, 'No function provided.')
+```
 
 You can call vicibox server. Remeber to provide valid base url with your Vicibox
 IP address and credentials. Moreover  the second parameter should contain following keys:
 - function - choose which function of Non-agent API you want to call,
 - query params - enter all query parameters that are accessible using provided function.
 
-License
-=======
+# License
 
 This project is licensed under the terms of the MIT license.
+
+# Docs:
+- [Agent](https://github.com/masterfermin02/vicidial-api-wrapper/blob/main/docs/agent.md)
+- [Admin](https://github.com/masterfermin02/vicidial-api-wrapper/blob/main/docs/admin.md)
