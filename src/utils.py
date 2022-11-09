@@ -14,7 +14,8 @@ def create_base_agent_url(vicibox_server_ip: str, vicibox_source: str, vicibox_u
     return agent_url
 
 
-def create_target_url(base_url: str, dict_of_query_values: dict) -> str:
+def create_target_url(base_url: str, function: str, dict_of_query_values: dict) -> str:
+    base_url += f'&function={function}'
     for key, value in dict_of_query_values.items():
         base_url += f'&{key}={value}'
     return base_url
@@ -22,5 +23,5 @@ def create_target_url(base_url: str, dict_of_query_values: dict) -> str:
 
 async def make_request(call_url: str) -> dict:
     async with httpx.AsyncClient() as client:
-        response = client.get(call_url, timeout=15)
+        response = await client.get(call_url, timeout=15)
     return response

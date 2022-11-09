@@ -5,7 +5,6 @@ name = "pypi"
 
 [packages]
 httpx = "*"
-fastapi = "*"
 
 [dev-packages]
 bandit = "*"

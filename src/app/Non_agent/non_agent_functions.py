@@ -1,7 +1,3 @@
-from fastapi.exceptions import HTTPException
-
-from utils import make_request, create_target_url
-
 non_agent_function_list = [
     'version',
     # shows version and build of the API, along with the date/time and timezone
@@ -579,16 +575,3 @@ non_agent_function_list = [
     # updates CID Group entries in the vicidial_campaign_cid_areacodes table
     # For required field check update_cid_group_entry field in documentation: http://vicidial.org/docs/NON-AGENT_API.txt
 ]
-
-
-async def call_non_agent_api(base_non_agent_url: str, function_and_values_dict: dict) -> dict:
-    if 'function' in function_and_values_dict:
-        if function_and_values_dict['function'] in non_agent_function_list:
-            # Create target URL based on query params that was provided
-            url = create_target_url(base_non_agent_url, function_and_values_dict)
-
-            # Make a request to Vicibox
-            response = await make_request(url)
-            return response
-        raise HTTPException(400, 'Provided function is not accessible via non-agent API.')
-    raise HTTPException(400, 'No function provided.')
