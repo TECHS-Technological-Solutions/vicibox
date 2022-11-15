@@ -601,6 +601,7 @@ class UpdateCIDGroupEntry(BaseModel):
 
 
 schemas_non_agent_dict = {
+    'version': Version,
     'sound_list': SoundList,
     'moh_list': MOHList,
     'vm_list': VMList,
