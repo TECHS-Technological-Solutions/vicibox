@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 httpx = "*"
+pydantic = "*"
 
 [dev-packages]
 bandit = "*"
