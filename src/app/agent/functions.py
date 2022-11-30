@@ -61,14 +61,14 @@ agent_function_list = [
 
     'external_add_lead',
     # Adds a lead in the manual dial list of the campaign for logged-in agent.
-    # A much simplified add lead function compared to the Non-Agent API function
+    # A much simplified add lead function compared to the Non-agent API function
     # For required fields check external_add_lead field in documentation: http://vicidial.org/docs/AGENT_API.txt
 
     'change_ingroups',
     # This function will change the selected in-groups for an agent that is logged into a campaign that allows for
     # inbound calls to be handled. Allows the selected in-groups for an agent to be changed while they are
-    # logged-in to the ViciDial Agent screen only. Once changed in this way, the agent would need to log out
-    # and back in to be able to select in-groups themselves(If Agent Choose In-Groups is enabled for that user).
+    # logged-in to the ViciDial agent screen only. Once changed in this way, the agent would need to log out
+    # and back in to be able to select in-groups themselves(If agent Choose In-Groups is enabled for that user).
     # The blended checkbox can also be changed using this function. The API user performing this function must have
     # vicidial_users.change_agent_campaign = 1.
     # For required fields check change_ingroups field in documentation: http://vicidial.org/docs/AGENT_API.txt

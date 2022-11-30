@@ -3,7 +3,7 @@ from datetime import date, datetime
 
 from pydantic import BaseModel
 
-from app.Non_agent import enums
+from app.nonAgent import enums
 
 
 class Version(BaseModel):
