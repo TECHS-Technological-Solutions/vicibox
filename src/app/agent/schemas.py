@@ -3,8 +3,8 @@ from datetime import date, datetime
 
 from pydantic import BaseModel, validator
 
-from app.Agent import enums
-from app.Non_agent.enums import ViciboxBoolean, Gender
+from app.agent import enums
+from app.nonAgent.enums import ViciboxBoolean, Gender
 
 
 class Version(BaseModel):
